@@ -31,6 +31,10 @@ public class SplashPagerAdapter extends PagerAdapter {
         return views.length;
     }
 
+    public View getView(int position) {
+        return views[position];
+    }
+
     @Override
     public boolean isViewFromObject(View view, Object object) {
         return view == object;
