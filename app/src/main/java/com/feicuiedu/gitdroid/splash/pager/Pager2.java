@@ -23,25 +23,28 @@ public class Pager2 extends FrameLayout {
     @BindView(R.id.ivBubble1)ImageView ivBubble1;
     @BindView(R.id.ivBubble2)ImageView ivBubble2;
     @BindView(R.id.ivBubble3)ImageView ivBubble3;
+
     public Pager2(Context context) {
-        super(context);
+
+        this(context, null);
     }
 
     public Pager2(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
-    }
 
-    private void init() {
-        LayoutInflater.from(getContext()).inflate(R.layout.content_pager_2,this,true);
-        ButterKnife.bind(this);
-        ivBubble1.setVisibility(View.GONE);
-        ivBubble2.setVisibility(View.GONE);
-        ivBubble3.setVisibility(View.GONE);
+        this(context, attrs, 0);
     }
 
     public Pager2(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    private void init() {
+        LayoutInflater.from(getContext()).inflate(R.layout.content_pager_2, this, true);
+        ButterKnife.bind(this);
+        ivBubble1.setVisibility(View.GONE);
+        ivBubble2.setVisibility(View.GONE);
+        ivBubble3.setVisibility(View.GONE);
     }
 
     /** 用来显示当前页面内三张图像的进入动画，只显示一次*/
@@ -67,4 +70,5 @@ public class Pager2 extends FrameLayout {
             }, 1050);
         }
     }
+
 }

@@ -11,6 +11,7 @@
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">
         </activity>
+
         <activity android:name=".splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>

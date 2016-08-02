@@ -1,16 +1,15 @@
 package com.feicuiedu.gitdroid.splash;
 
 import android.animation.ArgbEvaluator;
-import android.animation.IntEvaluator;
-import android.app.Fragment;
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
+
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -31,8 +30,8 @@ public class SplashPagerFragment extends Fragment {
     private SplashPagerAdapter adapter;
     @BindView(R.id.indicator)
     CircleIndicator indicator;
-    @BindView(R.id.content)FrameLayout frameLayout;//µ±Ç°Ò³Ãælayout
-    @BindView(R.id.layoutPhone) FrameLayout layoutPhone;// ÆÁÄ»ÖÐÑëµÄ"ÊÖ»ú"
+    @BindView(R.id.content)FrameLayout frameLayout;//ï¿½ï¿½Ç°Ò³ï¿½ï¿½layout
+    @BindView(R.id.layoutPhone) FrameLayout layoutPhone;// ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½"ï¿½Ö»ï¿½"
     @BindView(R.id.ivPhoneFont)
     ImageView ivPhoneFont;
 
@@ -54,27 +53,27 @@ public class SplashPagerFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+
         adapter = new SplashPagerAdapter(getContext());
         viewPager.setAdapter(adapter);
         indicator.setViewPager(viewPager);
-        //Ìí¼Óviewpager¼àÌý£¨ÎªÁË¶¯»­£©
+        //ï¿½ï¿½ï¿½viewpagerï¿½ï¿½ï¿½ï¿½Îªï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½
         viewPager.addOnPageChangeListener(pageColorListener);
         viewPager.addOnPageChangeListener(phoneViewListener);
     }
 
-    //ÑÕÉ«±³¾°½¥±ä
+    //ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private ViewPager.OnPageChangeListener pageColorListener = new ViewPager.OnPageChangeListener() {
         final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-        //ÔÚScroll¹ö¶¯¹ý³ÌÖÐ½øÐÐ³ö·¢
+        //ï¿½ï¿½Scrollï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½Ð³ï¿½ï¿½ï¿½
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            // µÚÒ»¸öÒ³Ãæµ½µÚ¶þ¸öÒ³ÃæÖ®¼ä
+            // ï¿½ï¿½Ò»ï¿½ï¿½Ò³ï¿½æµ½ï¿½Ú¶ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ö®ï¿½ï¿½
             if(position == 0){
                 int color = (int) argbEvaluator.evaluate(positionOffset,colorGreen,colorRed);
                 frameLayout.setBackgroundColor(color);
             }
-            // µÚ¶þ¸öÒ³Ãæµ½µÚÈý¸öÒ³ÃæÖ®¼ä
+            // ï¿½Ú¶ï¿½ï¿½ï¿½Ò³ï¿½æµ½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ö®ï¿½ï¿½
             if(position == 1){
                 int color = (int) argbEvaluator.evaluate(positionOffset,colorRed,colorYellow);
                 frameLayout.setBackgroundColor(color);
@@ -92,23 +91,23 @@ public class SplashPagerFragment extends Fragment {
         }
     };
 
-    //ÊÖ»ú¶¯»­Ð§¹û´¦Àí£¨Æ½ÒÆ¡¢Ëõ·Å¡¢Í¸Ã÷¶È±ä»¯£©
+    //ï¿½Ö»ï¿½Ð§ï¿½ï¿½ï¿½?Æ½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½Å¡ï¿½Í¸ï¿½ï¿½ï¿½È±ä»¯ï¿½ï¿½
     private ViewPager.OnPageChangeListener phoneViewListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             if(position == 0){
-                // ÊÖ»úµÄËõ·Å´¦Àí
+                // ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½Å´ï¿½ï¿½ï¿½
                 float scale = 0.3f + positionOffset * 0.7f;
                 layoutPhone.setScaleX(scale);
                 layoutPhone.setScaleY(scale);
-                // ÊÖ»úµÄÆ½ÒÆ´¦Àí
+                // ï¿½Ö»ï¿½ï¿½Æ½ï¿½Æ´ï¿½ï¿½ï¿½
                 int scroll = (int) ((positionOffset - 1) * 360);
                 layoutPhone.setTranslationX(scroll);
-                // ÊÖ»ú×ÖÌåµÄ½¥±ä
+                // ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
                 ivPhoneFont.setAlpha(positionOffset);
                 return;
             }
-            //µÚ¶þµ½µÚÈý¸öÒ³Ãæ
+            //ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
             if(position == 1){
                 layoutPhone.setTranslationX(-positionOffsetPixels);
             }
@@ -116,7 +115,7 @@ public class SplashPagerFragment extends Fragment {
 
         @Override
         public void onPageSelected(int position) {
-            // µ±ÏÔÊ¾³ö×îºóÒ»¸öpagerÊ±£¬²¥·ÅËü×Ô¼ºµÄ¶¯»­
+            // ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½pagerÊ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
             if(position == 2) {
                 Pager2 pager2View = (Pager2) adapter.getView(position);
                 pager2View.showAnimation();
