@@ -24,6 +24,7 @@ import butterknife.ButterKnife;
  * 展示loading (进度条)
  * 显示错误（当点击时，重新load）
  * 显示没有更多数据
+ *
  */
 public class FooterView extends FrameLayout{
     private static final int STATE_LOADING = 0;

@@ -9,7 +9,6 @@ import com.feicuiedu.gitdroid.github.hotrepo.repolist.RepoListFragment;
 
 import java.util.List;
 
-
 public class HotRepoAdapter extends FragmentPagerAdapter {
     private List<Language> languages;
 

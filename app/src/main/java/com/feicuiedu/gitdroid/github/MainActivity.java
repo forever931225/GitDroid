@@ -26,17 +26,16 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 /**
- * µ±Ç°Ó¦ÓÃÖ÷Ò³Ãæ
+ * å½“å‰åº”ç”¨ä¸»é¡µé¢
  */
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.drawerLayout) DrawerLayout drawerLayout; // ³éÌë(°üº¬ÄÚÈİ+²à»¬²Ëµ¥)
-    @BindView(R.id.navigationView) NavigationView navigationView; // ²à»¬²Ëµ¥ÊÓÍ¼
+    @BindView(R.id.drawerLayout) DrawerLayout drawerLayout; // æŠ½å±‰(åŒ…å«å†…å®¹+ä¾§æ»‘èœå•)
+    @BindView(R.id.navigationView) NavigationView navigationView; // ä¾§æ»‘èœå•è§†å›¾
 
-    // ÈÈÃÅ²Ö¿âFragment
+    // çƒ­é—¨ä»“åº“Fragment
     private HotRepoFragment hotRepoFragment;
     private HotUserFragment hotUserFragment;
 
@@ -49,21 +48,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityUtils = new ActivityUtils(this);
-        // ÉèÖÃµ±Ç°ÊÓÍ¼(Ò²¾ÍÊÇËµ£¬¸ü¸ÄÁËµ±Ç°ÊÓÍ¼ÄÚÈİ,½«µ¼ÖÁonContentChanged·½·¨´¥·¢)
+        // è®¾ç½®å½“å‰è§†å›¾(ä¹Ÿå°±æ˜¯è¯´ï¼Œæ›´æ”¹äº†å½“å‰è§†å›¾å†…å®¹,å°†å¯¼è‡³onContentChangedæ–¹æ³•è§¦å‘)
         setContentView(R.layout.activity_main);
     }
 
     @Override public void onContentChanged() {
         super.onContentChanged();
         ButterKnife.bind(this);
-        // ActionBar´¦Àí
+        // ActionBarå¤„ç†
         setSupportActionBar(toolbar);
-        // ÉèÖÃnavigationViewµÄ¼àÌıÆ÷
+        // è®¾ç½®navigationViewçš„ç›‘å¬å™¨
         navigationView.setNavigationItemSelectedListener(this);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(// ¹¹½¨³éÌëµÄ¼àÌı
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(// æ„å»ºæŠ½å±‰çš„ç›‘å¬
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        toggle.syncState();// ¸ù¾İdrawerlayoutÍ¬²½Æäµ±Ç°×´Ì¬
-        // ÉèÖÃ³éÌë¼àÌı
+        toggle.syncState();// æ ¹æ®drawerlayoutåŒæ­¥å…¶å½“å‰çŠ¶æ€
+        // è®¾ç½®æŠ½å±‰ç›‘å¬
         drawerLayout.setDrawerListener(toggle);
         btnLogin = ButterKnife.findById(navigationView.getHeaderView(0), R.id.btnLogin);
         ivIcon = ButterKnife.findById(navigationView.getHeaderView(0), R.id.ivIcon);
@@ -73,22 +72,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 finish();
             }
         });
-        // Ä¬ÈÏÏÔÊ¾µÄÊÇÈÈÃÅ²Ö¿âfragment
+        // é»˜è®¤æ˜¾ç¤ºçš„æ˜¯çƒ­é—¨ä»“åº“fragment
         hotRepoFragment = new HotRepoFragment();
         replaceFragment(hotRepoFragment);
     }
 
     @Override protected void onStart() {
         super.onStart();
-        // Ã»ÓĞÊÚÈ¨µÄ»°
+        // æ²¡æœ‰æˆæƒçš„è¯
         if (UserRepo.isEmpty()) {
             btnLogin.setText(R.string.login_github);
             return;
         }
         btnLogin.setText(R.string.switch_account);
-        // ÉèÖÃTitle
+        // è®¾ç½®Title
         getSupportActionBar().setTitle(UserRepo.getUser().getName());
-        // ÉèÖÃÓÃ»§Í·Ïñ
+        // è®¾ç½®ç”¨æˆ·å¤´åƒ
         String photoUrl = UserRepo.getUser().getAvatar();
         ImageLoader.getInstance().displayImage(photoUrl, ivIcon);
     }
@@ -100,15 +99,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         transaction.commit();
     }
 
-    // ²à»¬²Ëµ¥¼àÌıÆ÷
+    // ä¾§æ»‘èœå•ç›‘å¬å™¨
     @Override public boolean onNavigationItemSelected(MenuItem item) {
-        // ½«Ä¬ÈÏÑ¡ÖĞÏî¡°ÊÖ¶¯¡±ÉèÖÃÎªfalse
+        // å°†é»˜è®¤é€‰ä¸­é¡¹â€œæ‰‹åŠ¨â€è®¾ç½®ä¸ºfalse
         if (item.isChecked()) {
             item.setChecked(false);
         }
-        // ¸ù¾İÑ¡Ôñ×öÇĞ»»
+        // æ ¹æ®é€‰æ‹©åšåˆ‡æ¢
         switch (item.getItemId()) {
-            // ÈÈÃÅ²Ö¿â
+            // çƒ­é—¨ä»“åº“
             case R.id.github_hot_repo:
                 if (!hotRepoFragment.isAdded()) {
                     replaceFragment(hotRepoFragment);
@@ -121,14 +120,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
                 break;
         }
-        // ¹Ø±ÕdrawerLayout
+        // å…³é—­drawerLayout
         drawerLayout.post(new Runnable() {
             @Override public void run() {
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
         });
-        // ·µ»Øtrue£¬´ú±í½«¸Ã²Ëµ¥Ïî±äÎªchecked×´Ì¬
+        // è¿”å›trueï¼Œä»£è¡¨å°†è¯¥èœå•é¡¹å˜ä¸ºcheckedçŠ¶æ€
         return true;
     }
-
 }

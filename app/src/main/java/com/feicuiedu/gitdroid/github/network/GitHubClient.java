@@ -19,6 +19,7 @@ import retrofit2.http.Query;
 
 /**
  * 用Retrofit的话，能基本表现出很多的HTTP基本知识
+ *
  */
 public class GitHubClient implements GitHubApi{
 

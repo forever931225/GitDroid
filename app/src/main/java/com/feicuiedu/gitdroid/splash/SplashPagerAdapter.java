@@ -6,19 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.feicuiedu.gitdroid.R;
 import com.feicuiedu.gitdroid.splash.pager.Pager0;
 import com.feicuiedu.gitdroid.splash.pager.Pager1;
 import com.feicuiedu.gitdroid.splash.pager.Pager2;
 
-
-/**
- * Created by Administrator on 16-7-29.
- */
 public class SplashPagerAdapter extends PagerAdapter {
     private final View[] views;
 
-    public SplashPagerAdapter(Context context){
+    public SplashPagerAdapter(Context context) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         views = new View[]{
                 new Pager0(context),
@@ -26,29 +21,25 @@ public class SplashPagerAdapter extends PagerAdapter {
                 new Pager2(context)
         };
     }
-    @Override
-    public int getCount() {
-        return views.length;
-    }
 
     public View getView(int position) {
         return views[position];
     }
 
-    @Override
-    public boolean isViewFromObject(View view, Object object) {
+    @Override public int getCount() {
+        return views.length;
+    }
+
+    @Override public boolean isViewFromObject(View view, Object object) {
         return view == object;
     }
 
-    @Override
-    public Object instantiateItem(ViewGroup container, int position) {
-        container.addView(views[position],0);
+    @Override public Object instantiateItem(ViewGroup container, int position) {
+        container.addView(views[position], 0);
         return views[position];
-
     }
 
-    @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    @Override public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
     }
 }

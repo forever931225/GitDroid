@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GitDroid</string>
+    <string name="app_name">GitDroidDG</string>
 
     <string name="login_github">登录GitHub</string>
     <string name="enter_app">直接使用</string>
@@ -45,5 +45,4 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_home">HomeActivity</string>
 </resources>

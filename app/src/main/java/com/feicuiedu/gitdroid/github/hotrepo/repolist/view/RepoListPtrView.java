@@ -4,6 +4,7 @@ import com.feicuiedu.gitdroid.github.hotrepo.repolist.modle.Repo;
 
 import java.util.List;
 
+
 public interface RepoListPtrView {
     /** 显示下拉刷新时的内容视图*/
     void showContentView();

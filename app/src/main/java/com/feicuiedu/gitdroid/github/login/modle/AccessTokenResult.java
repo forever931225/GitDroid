@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * 授权登陆响应结果
+ *
  */
 public class AccessTokenResult {
 

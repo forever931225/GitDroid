@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
  * 热门仓库Fragment
  *
  * 里面放着一个ViewPager，在Adapter里面，每一个pager面都是一个Fragment
-
+ *
  */
 public class HotRepoFragment extends Fragment{
 

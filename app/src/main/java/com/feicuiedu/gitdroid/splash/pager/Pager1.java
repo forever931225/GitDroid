@@ -5,28 +5,27 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
-
 import com.feicuiedu.gitdroid.R;
 
-/**
- * Created by Administrator on 16-7-29.
- */
 public class Pager1 extends FrameLayout {
+
+
     public Pager1(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public Pager1(Context context, AttributeSet attrs) {
-        this(context, attrs,0);
-
-    }
-
-    private void init() {
-        LayoutInflater.from(getContext()).inflate(R.layout.content_pager_1, this, true);
+        this(context, attrs, 0);
     }
 
     public Pager1(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
+
+    private void init() {
+        LayoutInflater.from(getContext()).inflate(R.layout.content_pager_1, this, true);
+    }
+
+
 }

@@ -1,6 +1,5 @@
 package com.feicuiedu.gitdroid.github.login;
 
-
 public interface LoginView {
 
     // 显示进度

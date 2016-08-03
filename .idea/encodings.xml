@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/assets" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/GitDroidApplication.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/GitDroidApplication.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/GitDroidApplication.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/MainActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/commons" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/components" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/MainActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/MainActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/Language.java" charset="GBK" />
@@ -21,8 +27,12 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/hotrepo/view" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/hotrepo/view/RepoListLoadMoreView.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/login" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/splash" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/res" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hot_user.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/layout_item_user.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/res" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

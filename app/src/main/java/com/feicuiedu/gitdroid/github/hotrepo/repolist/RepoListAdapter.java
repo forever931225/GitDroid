@@ -8,8 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.feicuiedu.gitdroid.R;
+import com.feicuiedu.gitdroid.github.MainActivity;
 import com.feicuiedu.gitdroid.github.hotrepo.repolist.modle.Repo;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -59,6 +61,7 @@ public class RepoListAdapter extends BaseAdapter {
         viewHolder.tvRepoName.setText(repo.getFullName());
         viewHolder.tvRepoInfo.setText(repo.getDescription());
         viewHolder.tvRepoStars.setText(repo.getStarCount() + "");
+
         ImageLoader.getInstance().displayImage(repo.getOwner().getAvatar(), viewHolder.ivIcon);
         return convertView;
     }

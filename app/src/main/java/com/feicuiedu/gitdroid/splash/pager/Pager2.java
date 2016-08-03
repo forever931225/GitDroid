@@ -14,9 +14,6 @@ import com.feicuiedu.gitdroid.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by Administrator on 16-7-29.
- */
 
 public class Pager2 extends FrameLayout {
 
@@ -25,12 +22,10 @@ public class Pager2 extends FrameLayout {
     @BindView(R.id.ivBubble3)ImageView ivBubble3;
 
     public Pager2(Context context) {
-
         this(context, null);
     }
 
     public Pager2(Context context, AttributeSet attrs) {
-
         this(context, attrs, 0);
     }
 
