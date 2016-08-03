@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/GitDroidApplication.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/commons" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/components" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/Language.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/modle/Repo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/modle/ReposResult.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/view/RepoListLoadMoreView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/view/RepoListPtrView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotrepo/view/RepoListView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/hotuser" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/login" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/network" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/github/repoinfo" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/hotrepo/Language.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/hotrepo/modle" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/hotrepo/view" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/hotrepo/view/RepoListLoadMoreView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/feicuiedu/gitdroid/login" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hot_user.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/layout_item_user.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

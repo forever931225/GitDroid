@@ -3,7 +3,7 @@ package com.feicuiedu.gitdroid.splash;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.feicuiedu.gitdroid.MainActivity;
+import com.feicuiedu.gitdroid.github.MainActivity;
 import com.feicuiedu.gitdroid.R;
 import com.feicuiedu.gitdroid.commons.ActivityUtils;
 
